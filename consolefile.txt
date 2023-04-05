@@ -1,0 +1,24 @@
+Before running the project, execute SQL commands in order.
+
+mysql -u root -p
+
+CREATE USER 'Junaid'@'localhost' IDENTIFIED BY 'passaccess';
+
+GRANT ALL PRIVILEGES ON * . * TO 'Junaid'@'localhost';
+
+CREATE DATABASE aforu;
+
+USE aforu;
+
+CREATE TABLE doclogin(docname VARCHAR(100), username VARCHAR(100), password VARCHAR(20));
+
+INSERT INTO doclogin VALUES('root','admin','password');
+
+CREATE TABLE docdetails(name VARCHAR(100), regno INT, address VARCHAR(200), mobno INT, email VARCHAR(30));
+
+CREATE TABLE prescriptions(docname VARCHAR(50), patname VARCHAR(100), date DATE, patdetails LONGBLOB, id INT);
+
+
+Challenges:
+
+Put Autosuggest option for input field Prescriptions containing items sourced from an excel sheet.
